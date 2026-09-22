@@ -1,0 +1,4 @@
+## Include the library that you need to run for development/testing
+-r requirements.txt
+pytest==9.1.1
+ruff==0.16.5
