@@ -1,0 +1,18 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+
+ENV MET_OFFICE_ATOMSPHERIC_API_KEY=""
+ENV MET_OFFICE_MAP_IMAGE_API_KEY=""
+ENV MET_OFFICE_OBSERVATION_API_KEY=""
+ENV MET_OFFICE_SITE_SPECIFIC_GLOBAL_SPOT_DATA_API_KEY=""
+ENV MET_OFFICE_WARNING_API_KEY=""
+
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
+
+COPY src .
+
+EXPOSE 8000
+
+CMD ["fastapi", "run", "/app/uk_weather_services/server.py", "--port", "8000"]

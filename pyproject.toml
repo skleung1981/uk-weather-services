@@ -1,15 +1,19 @@
 
 [project]
-name = "python-template"
-version = "0.1.1"
-description = "<It is the project template, please change it in the first commit.>"
-requires-python = ">=3.12"
-readme = "README.md"
-dependencies = []
+name = 'uk_weather_service'
+version = '0.1.1'
+description = 'UK Weather Services'
+requires-python = '>=3.12'
+readme = 'README.md'
+dependencies = [
+    'requests~=2.32',
+    'fastapi[standard]~=0.142.2'
+]
 
 [build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
+requires = ['setuptools>=68']
+build-backend = 'setuptools.build_meta'
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+pythonpath = ["src"]
+testpaths = ['tests']
