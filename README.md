@@ -10,7 +10,7 @@ This original repository is not stored in the GitHub, it is stored in private re
 
 To build the python package
 ```
-python build -m
+python -m build
 ```
 
 To build the docker image 
