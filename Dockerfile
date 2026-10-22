@@ -26,4 +26,12 @@ COPY --from=builder /deps /usr/local/lib/python3.14/site-packages
 COPY --from=builder /build /app
 WORKDIR /app
 ##### Application level, it is required to update
-CMD ["python3", "--version"]
+ENV MET_OFFICE_ATOMSPHERIC_API_KEY=""
+ENV MET_OFFICE_MAP_IMAGE_API_KEY=""
+ENV MET_OFFICE_OBSERVATION_API_KEY=""
+ENV MET_OFFICE_SITE_SPECIFIC_GLOBAL_SPOT_DATA_API_KEY=""
+ENV MET_OFFICE_WARNING_API_KEY=""
+
+EXPOSE 8000
+
+CMD ["fastapi", "run", "/app/uk_weather_services/server.py", "--port", "8000"]
