@@ -16,7 +16,7 @@ python -m build
 To build the docker image 
 
 ```
-docker compose -f docker-compose-local-dev.yaml build
+docker compose -f <docker compose file> build
 ```
 
 ## How to use
@@ -26,7 +26,7 @@ There are two ways to use it
 1. Use it as a Python library
 2. Run it as an API server using FastAPI via port 10080
 ```
-docker compose -f docker-compose-local-dev.yaml up -d
+docker compose -f <docker compose file> up -d
 ```
 
 ### Configuration
