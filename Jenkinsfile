@@ -5,7 +5,7 @@ pipeline {
     agent any
 
     environment {
-        PROJECT_NAME = 'uk_weather_service'
+        PROJECT_NAME = 'uk-weather-services'
         NEXUS_SERVICE_HOST = 'nexus-service'
         NEXUS_TRUSTED_HOST = 'nexus-service.saturn-cicd.svc.cluster.local'
         NEXUS_PORT = 8081

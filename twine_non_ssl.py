@@ -4,7 +4,10 @@ import twine.repository
 
 
 def disable_server_certificate_validation():
-    "Disable SSL verification for all twine uploads"
+    """
+    Disable SSL verification for all twine uploads
+    :return:
+    """
     old_init = twine.repository.Repository.__init__
 
     def new_init(self, *args, **kwargs):
