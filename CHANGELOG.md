@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.4
+- Add twine_non_ssl to upload the package to saturn nexus
+
 ## 0.1.3
 - Locations
   - Add defined locations
