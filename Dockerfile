@@ -34,4 +34,4 @@ ENV MET_OFFICE_WARNING_API_KEY=""
 
 EXPOSE 8000
 
-CMD ["fastapi", "run", "/app/uk_weather_services/api_server/server.py", "--port", "8000"]
+CMD ["python3", "-m", "fastapi", "run", "/app/uk_weather_services/api_server/server.py", "--port", "8000"]
