@@ -36,4 +36,10 @@ For a standalone library, you need the following
 
 For an API server, you need the following
 - API keys from Met office for corresponding data feed and put it as an environment variable. Please see local docker file and compose file.
+- if the API keys are stored in K8S as secret, please use the following commands
+  ```
+  kubectl create secret generic uk-weather-api-keys --namespace saturn-backend \
+  --from-literal=spot-data-api-key=<> \
+  --from-literal=warnings-api-key=<>
+  ```
 

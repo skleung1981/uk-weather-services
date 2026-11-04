@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.5
+- Correct the docker cmd
+
 ## 0.1.4
 - Add twine_non_ssl to upload the package to saturn nexus
 
