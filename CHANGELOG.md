@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.7
+- Update README.md
+- Correct the project name
+
 ## 0.1.6
 - Correct the docker image
 

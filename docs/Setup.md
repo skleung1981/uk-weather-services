@@ -7,7 +7,7 @@
 4. Update README.md
 5. Make sure src folder is source root and tests in test root in Pycharm
 6. Rename the project_template under src folder
-7. Update CHANGELOD.md
+7. Update CHANGELOG.md
 8. Commit and create PR to review.
 
 ## Build as docker image

@@ -1,7 +1,7 @@
 
 [project]
-name = 'uk_weather_service'
-version = '0.1.6'
+name = 'uk-weather-services'
+version = '0.1.7'
 description = 'UK Weather Services'
 requires-python = '>=3.12'
 readme = 'README.md'

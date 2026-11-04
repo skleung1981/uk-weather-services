@@ -13,6 +13,6 @@ RUN pip3 install -r requirements.txt
 
 COPY src .
 
-EXPOSE 8000
+EXPOSE 8080
 
-CMD ["fastapi", "run", "/app/uk_weather_services/api_server/server.py", "--port", "8000"]
+CMD ["fastapi", "run", "/app/uk_weather_services/api_server/server.py", "--port", "8080"]
