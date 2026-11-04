@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.6
+- Correct the docker image
+
 ## 0.1.5
 - Correct the docker cmd
 

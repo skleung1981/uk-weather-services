@@ -18,20 +18,21 @@ RUN pip install --no-cache-dir --target=/deps \
         --trusted-host $NEXUS_HOST \
         -r requirements.txt
 
-COPY . .
+#COPY . .
 
 #####################################################################################
 FROM python:3.14-slim
 COPY --from=builder /deps /usr/local/lib/python3.14/site-packages
-COPY --from=builder /build /app
-WORKDIR /app
+#COPY --from=builder /build /app
 ##### Application level, it is required to update
 ENV MET_OFFICE_ATOMSPHERIC_API_KEY=""
 ENV MET_OFFICE_MAP_IMAGE_API_KEY=""
 ENV MET_OFFICE_OBSERVATION_API_KEY=""
 ENV MET_OFFICE_SITE_SPECIFIC_GLOBAL_SPOT_DATA_API_KEY=""
 ENV MET_OFFICE_WARNING_API_KEY=""
-
+ENV PYTHONPATH=/app
+WORKDIR /app
+COPY src/uk_weather_services/ /app/uk_weather_services/
 EXPOSE 8000
 
 CMD ["python3", "-m", "fastapi", "run", "/app/uk_weather_services/api_server/server.py", "--port", "8000"]
